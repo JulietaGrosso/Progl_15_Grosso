@@ -1,6 +1,7 @@
-package model;
+package model.servicios;
 
 public interface Servicio {
+
 
 
   public void aplicarServicio();

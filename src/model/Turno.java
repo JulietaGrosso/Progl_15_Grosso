@@ -1,5 +1,7 @@
 package model;
 
+import model.servicios.Servicio;
+
 import java.time.LocalDate;
 
 public class Turno {
@@ -9,7 +11,7 @@ public class Turno {
   private LocalDate fecha;
 
 
-  Turno(Mascota mascota, Duenio duenio, Servicio servicio, LocalDate fecha){
+  public Turno(Mascota mascota, Duenio duenio, Servicio servicio, LocalDate fecha){
     this.mascota = mascota;
     this.duenio = duenio;
     this.servicio = servicio;

@@ -1,4 +1,4 @@
-package model;
+package model.servicios;
 
 public class CortePelo implements Servicio{
 

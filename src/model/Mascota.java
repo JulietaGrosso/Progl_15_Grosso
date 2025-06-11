@@ -6,14 +6,16 @@ public abstract class Mascota {
   private String raza;
   private String comportamiento;
   final String id;
+  private double peso;
 
 
-  public Mascota(String nombre, int edad, String raza, String comportamiento, String id){
+  public Mascota(String nombre, int edad, String raza, String comportamiento, String id, double peso){
     this.nombre = nombre;
     this.edad = edad;
     this.raza = raza;
     this.comportamiento = comportamiento;
     this.id = id;
+    this.peso = peso;
   }
 
   public String getNombre() {
@@ -31,7 +33,7 @@ public abstract class Mascota {
   public String getId() {
     return id;
   }
-
+  public double getPeso() {return peso;}
 
   public void setNombre(String nombre) {
     this.nombre = nombre;
@@ -45,16 +47,18 @@ public abstract class Mascota {
   public void setComportamiento(String comportamiento) {
     this.comportamiento = comportamiento;
   }
-
+  public void setPeso(double peso) {
+    this.peso = peso;
+  }
 
 
 
   public void mostrarFicha(){
-
+    System.out.println();
   }
 
-  /*public abstract String tipoMascota(){
-
-  }*/
+  public String tipoMascota(){
+    return "";
+  }
 
 }

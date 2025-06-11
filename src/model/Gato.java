@@ -1,16 +1,15 @@
 package model;
 
 public class Gato extends Mascota{
-  private double peso;
 
 
-  Gato(String nombre, int edad, String raza, String comportamiento, String id){
-    super(nombre,edad,raza,comportamiento,id);
+  Gato(String nombre, int edad, String raza, String comportamiento, String id, double peso){
+    super(nombre,edad,raza,comportamiento,id,peso);
 
   }
 
-  public void tipoMascota(){
-
+  public String tipoMascota(){
+      return "Gato";
   }
 
   public void mostrarFicha(){

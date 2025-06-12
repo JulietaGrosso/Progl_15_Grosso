@@ -1,17 +1,23 @@
 package model;
 
+import model.tiposMascotas.Mascota;
+
 public class Duenio {
   private String nombre;
   private String telefono;
 
+  private Mascota mascotaArray[];
+  private int contadorMascota;
+  private Turno turnosArray[];
+  private int turnosContador;
 
-Mascota mascotaArray[];
-int contadorMascota;
-public Duenio(String nombre, String telefono){
+  public Duenio(String nombre, String telefono){
   this.nombre = nombre;
   this.telefono = telefono;
   this.mascotaArray = new Mascota[4];
   this.contadorMascota = 0;
+  this.turnosArray = new Turno[10];
+  this.turnosContador = 0;
 }
 
   public String getNombre() {
@@ -39,11 +45,29 @@ public Duenio(String nombre, String telefono){
   }
 
   public void mostrarMascota(){
+    System.out.println("Mascotas del dueño " + getNombre());
       for(Mascota mascota : this.mascotaArray){
         if(mascota != null){
+          System.out.println(" ");
           System.out.println("Mascota " + mascota.getNombre() + " Tipo " + mascota.tipoMascota());
+          System.out.println(mascota.mostrarFicha());
 
         }
       }
+  }
+
+  public void agregarTurnos(Turno turnos){
+    turnosArray[this.turnosContador] = turnos;
+    this.turnosContador = turnosContador + 1;
+  }
+
+  public void mostrarTurnos(){
+    System.out.println("Turnos del dueño " + getNombre());
+    for(Turno turno : this.turnosArray){
+      if(turno != null){
+        turno.mostrarDetalle();
+
+      }
+    }
   }
 }

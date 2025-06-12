@@ -1,4 +1,6 @@
-package model;
+package model.tiposMascotas;
+
+import java.util.UUID;
 
 public abstract class Mascota {
   private String nombre;
@@ -7,16 +9,18 @@ public abstract class Mascota {
   private String comportamiento;
   final String id;
   private double peso;
+  private double tamanio;
 
-
-  public Mascota(String nombre, int edad, String raza, String comportamiento, String id, double peso){
+  public Mascota(String nombre, int edad, String raza, String comportamiento, double peso, double tamanio){
     this.nombre = nombre;
     this.edad = edad;
     this.raza = raza;
     this.comportamiento = comportamiento;
-    this.id = id;
+    this.id = UUID.randomUUID().toString();
     this.peso = peso;
+    this.tamanio = tamanio;
   }
+
 
   public String getNombre() {
     return nombre;
@@ -34,6 +38,7 @@ public abstract class Mascota {
     return id;
   }
   public double getPeso() {return peso;}
+  public double getTamanio() {return tamanio;}
 
   public void setNombre(String nombre) {
     this.nombre = nombre;
@@ -47,14 +52,18 @@ public abstract class Mascota {
   public void setComportamiento(String comportamiento) {
     this.comportamiento = comportamiento;
   }
-  public void setPeso(double peso) {
-    this.peso = peso;
-  }
+  public void setPeso(double peso) { this.peso = peso;}
+  public void setTamanio(double tamanio) {this.tamanio = tamanio;}
 
 
-
-  public void mostrarFicha(){
-    System.out.println();
+  public String mostrarFicha(){
+    return "Nombre: " +  nombre + "\n"
+            + "ID: " +  id + "\n"
+            + " Edad: " +  edad + "\n"
+            + " Raza: " + raza + "\n"
+            + "Comportamiento: " + comportamiento + "\n"
+            + "Peso: " + peso + "\n"
+            + "Tamaño: " + tamanio;
   }
 
   public String tipoMascota(){

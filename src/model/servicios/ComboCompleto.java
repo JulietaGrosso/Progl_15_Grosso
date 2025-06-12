@@ -1,15 +1,18 @@
 package model.servicios;
 
+import model.tiposMascotas.Mascota;
+
 public class ComboCompleto implements Servicio{
 
   CortePelo corte;
   Banio ban;
   LimpiezaOidos limpieza;
 
-  public ComboCompleto(){
-    this.corte = new CortePelo();
-    this.ban = new Banio();
-    this.limpieza = new LimpiezaOidos();
+
+  public ComboCompleto(Mascota mascota){
+    this.corte = new CortePelo(mascota);
+    this.ban = new Banio(mascota);
+    this.limpieza = new LimpiezaOidos(mascota);
   }
 
   @Override

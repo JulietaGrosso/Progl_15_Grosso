@@ -1,6 +1,15 @@
 package model.servicios;
 
+import model.tiposMascotas.Mascota;
+
 public class CortePelo implements Servicio{
+
+  private Mascota mascota;
+  public CortePelo(Mascota mascota){
+    this.mascota = mascota;
+  }
+
+
 
   @Override
   public void aplicarServicio() {
@@ -9,6 +18,9 @@ public class CortePelo implements Servicio{
 
   @Override
   public double calcularPrecio() {
-    return 5000;
+    if(this.mascota.tipoMascota().equals("Perro")){
+      return 5000;
+    }
+    return 1000;
   }
 }

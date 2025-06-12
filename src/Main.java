@@ -45,6 +45,8 @@ public class Main {
 
 
     turno2.confirmarTurno();
+    turno3.confirmarTurno();
+    turno4.confirmarTurno();
     duenio1.agregarTurnos(turno1);
     duenio1.agregarTurnos(turno2);
     duenio2.agregarTurnos(turno3);
@@ -54,8 +56,15 @@ public class Main {
     duenio1.mostrarMascota();
     duenio1.mostrarTurnos();
     comboJohnny.aplicarServicio();
+    limpiezaZepelin.aplicarServicio();
 
+    duenio2.mostrarMascota();
+    duenio2.mostrarTurnos();
+    banioLeia.aplicarServicio();
 
+    duenio3.mostrarMascota();
+    duenio3.mostrarTurnos();
+    banioDonato.aplicarServicio();
 
 
 

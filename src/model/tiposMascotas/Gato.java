@@ -9,7 +9,8 @@ public class Gato extends Mascota{
   }
 
   public String tipoMascota(){
-      return "Gato";
+
+    return "Gato";
   }
 
 

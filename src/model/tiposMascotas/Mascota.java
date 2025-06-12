@@ -67,6 +67,7 @@ public abstract class Mascota {
   }
 
   public String tipoMascota(){
+
     return "";
   }
 

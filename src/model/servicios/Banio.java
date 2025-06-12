@@ -6,7 +6,8 @@ public class Banio implements Servicio {
 
   private Mascota mascota;
   public Banio(Mascota mascota){
-      this.mascota = mascota;
+
+    this.mascota = mascota;
   }
 
   @Override

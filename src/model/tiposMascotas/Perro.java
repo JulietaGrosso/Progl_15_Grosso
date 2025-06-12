@@ -10,7 +10,8 @@ public class Perro extends Mascota{
 
   @Override
   public String tipoMascota(){
-      return "Perro";
+
+    return "Perro";
   }
 
 

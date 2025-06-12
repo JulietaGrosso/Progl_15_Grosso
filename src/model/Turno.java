@@ -2,7 +2,6 @@ package model;
 
 import model.servicios.Servicio;
 import model.tiposMascotas.Mascota;
-
 import java.time.LocalDate;
 
 public class Turno {

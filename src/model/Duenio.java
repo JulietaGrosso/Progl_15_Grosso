@@ -8,6 +8,7 @@ public class Duenio {
 
   private Mascota mascotaArray[];
   private int contadorMascota;
+
   private Turno turnosArray[];
   private int turnosContador;
 
